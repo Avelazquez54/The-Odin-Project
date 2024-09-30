@@ -1,0 +1,11 @@
+p{
+    color:red;
+}
+
+.subtext{
+    text-align: center;
+}
+
+.subtext p{
+    color:green;
+}
