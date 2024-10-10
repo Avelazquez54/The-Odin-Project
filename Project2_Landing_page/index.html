@@ -7,30 +7,63 @@
     <title>Project 2: Landing Page</title>
 </head>
 <body>
-    <div class="first">
-        <div class="top_header">
+    <!-- First section being a mix of working with flex headers and flex layouts like in The Odin Project CSS exercises. -->
+    <div class="first_section">
+        <div class="header">
             <p>Header Logo</p>
             <ul>
-                <li>Header Link One</li>
-                <li>Header Link Two</li>
-                <li>Header Link Three</li>
+                <li><a>Header Link One</a></li>
+                <li><a>Header Link Two</a></li>
+                <li><a>Header Link Three</a></li>
             </ul>
         </div>
-        <div class="placeholder">
-                <div class="placeholder_content">
-                <p>This website is awesome</p>
-                <p1>This website has some subtextx that goes under the main title. It's a smaller font and the color is lower constrast.</p1>
-                </div>
-                <img src="data:image/jpeg;base64,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">
-                <!-- <p1>This website has some subtextx that goes under the main title. It's a smaller font and the color is lower constrast.</p1> -->
+        <div class="container1">    
+            <div class="placeholder">
+                <p class="Awesome">Some Text</p>
+                <p class="smol">Some Smaller text</p>
             </div>
-
-       <p>test</p>
+            <img src="./images/barberry.png" alt="barberry">
+        </div>
     </div>
 
-    <div class="second">
-        <p color="white"> test</p>
+        <!-- Second section similar to our Flex Information exercise from The Odin Project css exercise assignments. -->
+        <!-- Similar images are used from those exercises to for work purposes. All credit to The Odin Project. -->
+    <div class="title">Some random information!</div>
+    <div class="second_section">
+        <div class="info">
+            <img src="./images/barberry.png" alt="barberry">
+            <div class="text">This is a type of plant. We love this one.</div>
+        </div>
+        <div class="info">
+            <img src="./images/chilli.png" alt="chili">
+            <div class="text">This is another type of plant. Isn't it nice?</div>
+        </div>
+        <div class="info">
+            <img src="./images/pepper.png" alt="pepper">
+            <div class="text">We have so many plants. Yay plants.</div>
+        </div>
+        <div class="info">
+            <img src="./images/saffron.png" alt="saffron">
+            <div class="text">I'm running out of things to say about plants.</div>
+        </div>
+    </div>
+
+        <!-- Third section similar to the flex model and flex layout css exercises from The Odin Project.  -->
+    <div class="third_section">
+        <p class="quote">This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.</p>
+        <p class="mention">-Thor,  God of Thunder</p>
+    </div>
+
+
+    <div class="fourth_section">
+            <p class="action">Call to action! It's time!</p>
+            <p class="message">Sign up for our product by clicking the button right over there!</p>
+            <button>sign up</button>
+    </div>
+
+    <div class="footer">
+        <p>Copyright @ The Odin Project 2021</p>
     </div>
 
 </body>
-</html>
+</html
