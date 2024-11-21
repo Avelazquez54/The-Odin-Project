@@ -1,10 +1,15 @@
+html, body {
+    height: 100%;
+  }
+
 body{
     display:flex;
     flex-direction: column;
     background-color: white;
     margin:0px;
     font-family: Roboto, sans-serif;
-    /* gap:40px; */
+    gap:50px;
+    
 }
 
 
@@ -14,39 +19,40 @@ body{
     flex-direction: column;
     background-color:#1F2937;
     justify-content: center;
+    padding-bottom: 60px;
+}
+.first{
+    display:flex;
+    flex-direction: column;
+    margin:auto;
 }
 
 .header_section{
-    border-radius: 6px;
-    border-color: white;
-    border-style: solid;
     margin:auto;
     height:auto;
     padding-bottom:32px;
+    /* border: 6px white solid; Used for debugging. */
 }
 
 .header{
     display:flex;
     justify-content: space-between;
-    gap: 20px;
+    margin-bottom: 60px;
 }
 
 .Head{
     font-size: 24px;
     color:#F9FAF8;
-    border-radius: 6px;
-    border-color: pink;
-    border-style: solid;
+    /* border: 6px pink solid; Used for debugging. */
 }
 
 ul{
+    /* border: 6px orange solid; Used for debugging. */
     display:flex;
     list-style-type: none;
     gap:20px;
     align-items:center;
-    border-radius: 6px;
-    border-color: orange;
-    border-style: solid;
+    padding:0;
 }
 
 li{
@@ -54,59 +60,128 @@ li{
     color:#E5E7EB;
 }
 
-
-
 .Info{
+    /* border: 6px red solid; Used for debugging. */
     display:flex;
     gap:100px;
-    border-radius: 6px;
-    border-color: red;
-    border-style: solid;
-    /* margin:auto; */
-    /* padding:8px; */
     align-content: center;
     justify-content: center;
 }
 
 .text{
-    border-radius: 10px;
-    border-color: green;
-    border-style: solid;
+    /* border: 6px green solid; Used for debugging. */
     width:500px;
-    padding:8px;
 }
 
 .Large{
+    /* border: 6px chocolate solid; Used for debugging. */
     font-size:48px;
     color:#F9FAF8;
     font-weight: 900;
-}
-
-.placeholder{
-    display: flex;
-    background-color: grey;
-    border-radius: 6px;
-    border-color: yellow;
-    border-style: solid;
-    width:700px;
-    justify-content:center;
-    align-items: center;
+    margin:auto;
+    margin-left: 0px;
+    text-align: left;
 }
 
 .smol{
+    /* border: 6px aqua solid; Used for debugging. */
     font-size:18px;
     color:#E5E7EB;
+    margin-top: auto;
+    margin-bottom: 16px;
 }
 
 
 button{
     /* background-color:#3883F6; */
     cursor: pointer;
-    padding: 8px 16px;
+    padding: 8px 34px;
     border-radius: 8px;
     background: royalblue;
     border: 1px solid royalblue;
     color: white;
+    margin:auto;
 }
 
-/* END OF FIRST SECTION DIV CSS CODE */
+.placeholder{
+    display: flex;
+    background-color: grey;
+    /* border: 6px yellow solid; Used for debugging. */
+    width:700px;
+    justify-content:center;
+    align-items: center;
+}
+
+/* END OF FIRST SECTION DIV CSS CODE. */
+
+
+/* BEGINNING OF SECOND SECTION DIV CSS CODE. */
+
+.title {
+    font-size: 48px;
+    font-weight: 900;
+    color:#1F2937;
+    margin-top: 22px;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius:10px;
+    border-style: solid;
+    border-color:aqua
+  }
+
+.second_section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 32px;
+  }
+  
+  .information {
+    width: 200px;
+    text-align: center;
+  }
+
+  .info{
+    width:200px;
+  }
+
+  /* END OF SECOND SECTION DIV CSS CODE. */
+
+  /* BEGINNING OF THIRD SECTION DIV CSS CODE. */
+
+  .third_section{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    background-color:#E5E7EB;
+    padding:120px;
+  }
+
+  .container{
+    flex-direction: column;
+    margin:auto;
+  }
+
+  .quote{
+    /* border:5px solid blue; Used for Debugging. */
+    font-size: 36px;
+    color:#1F2937;
+    font-style: italic;
+    margin:0px;
+  }
+
+  .mention {
+    /* border:5px solid red; Used for Debugging. */
+    font-size: 36px;
+    color:#1F2937;
+    text-align: right;
+    margin:0px;
+  }
+
+
+  /* END OF THIRD SECTION DIV CSS CODE */
