@@ -52,7 +52,94 @@ let percentage = actual / max;
 console.log("Percentage =",percentage);
 
 
+// Practicing with all the different data types and conditionals properties within Javascript.
 
+// String types:
+
+const string = "The revolution will not be televised.";
+console.log(string);
+
+// Errors to look for when declaring string types. They are commented out by default to all further actions to work but un-comment them to figure out what the error looks like. 
+
+// const badString1 = This is a test; // This will throw an error as there are multiple values that are not grouped together and it being perceived as something else.
+// const badString2 = 'This is a test; // missing end/complete quote. 
+// const badString3 = This is a test'; missing beginning quote
+
+
+const badString = string;
+console.log(badString);
+
+// Using single, double and backticks for strings:
+
+const single = 'Single quotes';
+const double = "double quotes";
+const backtick = `backtick`;
+
+console.log(single);
+console.log(double);
+console.log(backtick);
+
+// Then can be errors made here as well, as you should not mix different type of quotes together: Again this section is commented out to allow further actions to occur but un-comment it to see error thrown in developer console tab on the webpage.
+
+// const badQuote = 'This is not allowed"; // You are not allowed to do this because different quote beginning and endings are present.
+
+
+// Embedded string using backticks:
+const name1 = "Chris";
+
+const greeting = `Hello, ${name1}`; // In order to add the name1 string declare before this, you must use a backtick.
+console.log(greeting);
+
+
+const string1 = "Hello, ";
+const string2 = "how are you?";
+
+const joined = `${string1}${string2}`;
+console.log(joined);
+
+// Using different date types with each other and mixing them all together into one giant string output.
+const song = "Fight the Youth";
+const score = 9;
+const highestScore = 10;
+const output = `I like the song ${song}. I give it a ${score} out of ${highestScore}`;
+const output1 = `I like the song ${song}. I give it a score of ${(score / highestScore) *100}%`;
+console.log(output);
+console.log(output1);
+
+// Multi-line strings: How to set a newline within a string type variable.
+
+// Using a newline in the physically string itself:
+const newLine = `One day you finally knew
+what you have to do, and began.`;
+console.log(newLine);
+
+// insert the keyword for a newline '\n':
+const newline = "One day you finally knew\nwhat you had to do, and began.";
+console.log(newline);
+
+// When trying to implement quotes, its best to use different type of quotes as shown below:
+
+const goodQuote1 = 'She said "I think so!"';
+const goodQuote2 = `She said "I'm going in there"`
+
+
+// Number and string:
+
+const name2 = "Front: ";
+const num = 123;
+console.log(name2 + num);
+
+// converting a string number as a number and vice versa. We also test the typeof functionality to see what data type or variable is as well as to confirm it has converted properly:
+
+const myString = "123";
+const myNum = Number(myString);
+
+console.log(typeof myNum);
+
+const string3 = 123;
+console.log(string3);
+const myNumber = String(string3);
+console.log(typeof myNumber);
 
 
 
