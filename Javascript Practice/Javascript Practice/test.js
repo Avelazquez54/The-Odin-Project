@@ -141,5 +141,33 @@ console.log(string3);
 const myNumber = String(string3);
 console.log(typeof myNumber);
 
+// Working with Comparison operations:
+
+// Boolean:
+
+alert(2>1);
+alert(2==1);
+alert(1!= 2);
+// Neat little trick is that the alert throws a warning on the screen that outputs the result of the boolean function. very handy for debugging!
+
+let result = 5>4;
+
+alert (result);
+
+// String comparisons:
+
+alert('z'>'a');
+console.log("Done")
+
+
+// Conditional statements:
+
+const hour = 15;
+
+if (hour < 14){
+    console.log("Winner Winner CHICKEN  DINNER!");
+} else{
+    console.log("WE GOT US A RUNNER");
+}
 
 
