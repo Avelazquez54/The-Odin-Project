@@ -9,17 +9,92 @@
 
 
      <!--Testing on how to use javascript within the html file itself. Similar to how we can reference css files, we can also do this with javascript files as shown below --> 
-    <!-- <script>
-        console.log("Hello World!");
-        console.log("This is to test my javascript as I am learning new topics about it! This message is being displayed by having the javascript code running in the same ");
-        // We used console.log() to print out any statement towards the user to see in the Developer Console section tab when they inspect the web browser. Try it out!
+    <script>
+        // console.log("Hello World!");
+        // console.log("This is to test my javascript as I am learning new topics about it! This message is being displayed by having the javascript code running in the same ");
+        // // We used console.log() to print out any statement towards the user to see in the Developer Console section tab when they inspect the web browser. Try it out!
 
-        let name = "Joe";
-        let surname = "Doe";
+        // let name = "Joe";
+        // let surname = "Doe";
 
-    </script> -->
+        function add7(number){
+            return number + 7;
+        }
+
+        function multiply(num1, num2) {
+            return num1 * num2;
+        }
+
+        // This function takes a string input and capitalizes the first letter of the string and lowercases the rest after.
+        function capitalized(word) {
+            // We split/slice the string into 2 substrings, 1: to capitalize the first letter and to lowercase the rest of the string to later combine them together and return as a result.
+            let cap = word.substring(0,1);
+            let char1 = cap.toUpperCase();
+
+            // Slice the rest of the substring and lowercase:
+            let part = word.slice(1,word.length+1)
+            let part1 = part.toLowerCase();
+
+            // Combine both substrings into one.
+            let result = char1.concat("", part1);
+            console.log(result); // Used for testing output 
+        }
+        
+        // lastLetter() function returns the last letter within the input string. **DISCLAIMER THAT THIS DOES DO PARSING OF INT VALUES THAT ARE INPUTTED INTO THE STRING TAKEN AS AN ARGUMENT FROM THE USER.**
+        function lastLetter(string){
+            for ( let i = string.length-1; i >= 0; i--){
+                // console.log(string[i]);
+                if (isNaN(parseInt(string[i]))){
+                    console.log("Found last Letter");
+                    return string[i];
+                }
+            }
+        }
+        
+        // You can make this where the user has to input a number or manually set a value to test calling functions within the script tags of an html page.
+        let input = prompt("Please enter value for add7 function testing", "0");
+
+        // We have to parse the input taken as it is recognized as a string/char data type and not a int data type
+        let value = parseInt(input); 
+        add7(value);
+        console.log("Result from add7() are:",add7(value));
+
+        // Testing multiply function calling
+        let numb1 = 2;
+        let num3 = 4;
+        console.log(multiply(numb1, num3));
+
+        // Testing capitalized function call:
+        let string = "mOtHeR";
+        // console.log(string[0]); Used for testing
+        capitalized(string);
+
+        // Testing lastLetter() function call:
+        let string1 = "e124124213"
+        lastLetter(string1);
+        console.log(lastLetter(string1));
+
+
+        // Solving the FIZZBUZZ problem presented from The Odin Project curriculum:
+        function fizzbuzz(number1) {
+            for ( let i = 1; i<= number1; i++){
+                if (i %5 === 0 && i % 3 === 0){
+                    console.log("FIZZBUZZ");
+                } else if (i % 3 === 0) {
+                    console.log ("FIZZ");
+                } else if (i %5 ===0) {
+                    console.log("BUZZ");
+                }else {
+                    console.log(i);
+                }
+            }
+        }
+
+        let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to:"));
+        fizzbuzz(answer);
+    </script>
 
     <!-- Similar to how we can reference CSS pages in the html page to apply their attributes, we can also reference javascript files to get there actions as well! -->
-    <script src="test.js"></script>
+    <!-- <script src="test.js"></script> -->
 </body>
 </html>
