@@ -92,6 +92,31 @@
 
         let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to:"));
         fizzbuzz(answer);
+
+
+
+        // Understanding how Reference errors work:
+
+        try {
+            let a = undefinedVariable;
+        } catch (e) {
+        console.log(e instanceof ReferenceError); // true
+        console.log(e.message); // "undefinedVariable is not defined"
+        console.log(e.name); // "ReferenceError"
+        console.log(e.stack); // Stack of the error
+        }
+
+        try {
+            throw new ReferenceError("Hello");
+        } catch (e) {
+        console.log(e instanceof ReferenceError); // true
+        console.log(e.message); // "Hello"
+        console.log(e.name); // "ReferenceError"
+        console.log(e.stack); // Stack of the error
+}
+
+
+
     </script>
 
     <!-- Similar to how we can reference CSS pages in the html page to apply their attributes, we can also reference javascript files to get there actions as well! -->
