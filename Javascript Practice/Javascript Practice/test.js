@@ -277,15 +277,15 @@
 
 // Testing Arrow Function:
 
-let sum = (a,b) => a+b;
+// let sum = (a,b) => a+b;
 
-alert(sum(1,2));
+// alert(sum(1,2));
 
 
-function ask(question, yes, no) {
-  if (confirm(question)) yes();
-  else no();
-}
+// function ask(question, yes, no) {
+//   if (confirm(question)) yes();
+//   else no();
+// }
 
 // ask(
 //   "Do you agree?",
@@ -296,9 +296,126 @@ function ask(question, yes, no) {
 // Function expressions above re-written using Arrow function:
 
 
-ask(
-  "Do you agree?",
-  () => { alert("You agreed."); },
-  () => { alert("You canceled the execution."); }
-);
+// ask(
+//   "Do you agree?",
+//   () => { alert("You agreed."); },
+//   () => { alert("You canceled the execution."); }
+// );
+
+
+
+// Testing DOM:
+
+// // selects the #container div (don't worry about the syntax, we'll get there)
+// const container = document.querySelector("#container");
+// let list = Array.from(container.childNodes);
+// console.log(list); // display all child elements within the container div class.
+
+// // selects the first child of #container => .display
+// const display = container.firstElementChild;
+// console.log(display);  // <div class="display"></div>
+
+
+
+// // creates a new div referenced in the variable 'div'
+// const div = document.createElement("div");
+
+// // adds the indicated style rule to the element in the div variable
+// div.style.color = "blue";
+
+// // adds several style rules
+// div.style.cssText = "color: blue; background: white;";
+
+// // adds several style rules
+// div.setAttribute("style", "color: blue; background: white;");
+
+
+// // creates a text node containing "Hello World!" and inserts it in div
+// div.textContent = "Hello World!";
+
+// // renders the HTML inside div
+// div.innerHTML = "<span>Hello World!</span>";
+
+// your JavaScript file
+// const container = document.querySelector("#container");
+
+// // We create a new div type element and name the div class content that will contain the text "This is the glorious text-content!"
+// // as its text-content attribute."
+// const content = document.createElement("div");
+// content.classList.add("content");
+// content.textContent = "This is the glorious text-content!";
+
+// container.appendChild(content);
+
+// Doing the exercises for DOM from The Odin Project:
+
+const container = document.querySelector("#container");
+
+// a <p> with red text that says “Hey I’m red!”
+const para = document.createElement("p");
+para.style.color = "Red";
+para.textContent = "Hey I'm red!"
+
+container.append(para);
+
+// an <h3> with blue text that says “I’m a blue h3!”
+
+const header = document.createElement("h3");
+header.style.color = "Blue";
+header.textContent = "I'm a blue h3!";
+
+container.append(header);
+
+
+// a <div> with a black border and pink background color with the following elements inside of it:
+// another <h1> that says “I’m in a div”
+// a <p> that says “ME TOO!”
+// Hint for this one: after creating the <div> with createElement, append the <h1> and <p> to it before adding it to the container.
+const newDiv = document.createElement("div");
+newDiv.style.background = "pink";
+newDiv.style.border = "black";
+newDiv.style.borderBlockStyle ="solid";
+
+const head = document.createElement("h1");
+head.textContent = "I'm in a div";
+
+const newText = document.createElement("p");
+newText.textContent = "ME TOO!"
+
+newDiv.append(head);
+newDiv.append(newText);
+
+
+container.append(newDiv);
+
+// Practicing with events in different ways:
+
+// Method 2:
+// the JavaScript file
+const btn = document.querySelector("#btn");
+btn.onclick = () => alert("Hello World");
+
+
+
+// Method 3: using eventListener():
+// the JavaScript file
+const button = document.querySelector("#button");
+button.addEventListener("click", () => {
+  alert("Hello World");
+});
+
+
+
+// Attaching listeners to groups of nodes:
+// buttons is a node list. It looks and acts much like an array.
+const buttons = document.querySelectorAll("button");
+
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+  // and for each one we add a 'click' listener
+  button.addEventListener("click", () => {
+    alert(button.id);
+  });
+});
+
 
