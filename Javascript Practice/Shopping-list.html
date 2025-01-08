@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 12px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button id ="btn">Add item</button>
+    </div>
+
+    <ul></ul>
+
+    <script>
+
+        // Function that deletes the value the user wants to delete from their shopping list.
+        function deleteListItem(value, list) {
+            // console.log("That worked"); // Used for debugging purposes.
+            list.removeChild(value);
+        };
+
+
+        // function creates a new list item with the input entered from the user for their shopping list alongside a delete button option that
+        // has an eventListener attached to for when user wants to delete shopping list item. 
+        function addItem(item, list){
+            let input = item.value;
+            // console.log(item.value); // Used for debugging purposes.
+            item.value = '';
+
+            const newList = document.createElement("li");
+            const newBtn = document.createElement("button");
+            const newSpan = document.createElement("span");
+
+            newList.appendChild(newSpan);
+            newList.appendChild(newBtn);
+            
+            newSpan.textContent = input;
+            newBtn.textContent = "Delete";
+            list.appendChild(newList);
+            newBtn.addEventListener("click",() => deleteListItem(newList, list));
+        };
+
+        const btn = document.querySelector("#btn");
+        const list = document.querySelector("ul");
+        const input = document.querySelector("#item");
+
+        // add a eventListener() function for when the user clicks the button, we immediately call addItem():
+        // passing the user's input text and our list as arguments to add the user's item and update our list.
+        // After user clicks the button, the page focuses on the input bar for next item user may enter.
+        btn.addEventListener("click", () => {
+            addItem(input, list);
+            document.getElementById("item").focus();
+        });
+
+    </script>
+  </body>
+</html>
